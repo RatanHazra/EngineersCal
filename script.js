@@ -80,7 +80,6 @@ const checkUserInput = () => {
         return;
       }
       result.textContent = `Binary: ${decimalToBinary(inputInt)} | Octal: ${decimalToOctal(inputInt)} | Hexadecimal: ${decimalToHexadecimal(inputInt)}`;
-      numberInput.value = "";
     } else if (conversion === "binary") {
       if (!/^[01]+$/.test(inputValue)) {
         alert("Please provide a valid binary number (only 0s and 1s).");
@@ -88,7 +87,6 @@ const checkUserInput = () => {
       }
       const decimal = binaryToDecimal(inputValue);
       result.textContent = `Decimal: ${decimal} | Octal: ${binaryToOctal(inputValue)} | Hexadecimal: ${binaryToHexadecimal(inputValue)}`;
-      numberInput.value = "";
     } else if (conversion === "octal") {
       if (!/^[0-7]+$/.test(inputValue)) {
         alert("Please provide a valid octal number (only 0-7).");
@@ -96,7 +94,6 @@ const checkUserInput = () => {
       }
       const decimal = octalToDecimal(inputValue);
       result.textContent = `Decimal: ${decimal} | Binary: ${octalToBinary(inputValue)} | Hexadecimal: ${octalToHexadecimal(inputValue)}`;
-      numberInput.value = "";
     } else if (conversion === "hex") {
       if (!/^[0-9A-Fa-f]+$/.test(inputValue)) {
         alert("Please provide a valid hexadecimal number (only 0-9 and A-F).");
@@ -104,7 +101,6 @@ const checkUserInput = () => {
       }
       const decimal = hexadecimalToDecimal(inputValue);
       result.textContent = `Decimal: ${decimal} | Binary: ${hexadecimalToBinary(inputValue)} | Octal: ${hexadecimalToOctal(inputValue)}`;
-      numberInput.value = "";
     }
   };
   
