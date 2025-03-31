@@ -55,6 +55,16 @@ h2 {
   cursor: pointer;
 }
 
+.convert-btn:hover {
+    background-color: rgb(0, 0, 0);
+    color: rgb(255, 255, 255);
+}
+
+.convert-btn:active {
+    background-color: rgb(0, 0, 0);
+    color: rgb(255, 0, 0);
+}
+
 .number-input {
   font-size: inherit;
   padding: 0.3rem;
