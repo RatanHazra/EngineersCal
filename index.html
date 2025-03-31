@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <main>
+        <h1>EngineersCal</h1>
+        <section class="input-container">
+            <select name="conversion-type" id="conversion-type">
+                <option value="d2b">Decimal to binary</option>
+            </select>
+            <label for="number-input">Enter a decimal number:</label>
+            <input
+              value=""
+              type="number"
+              name="decimal number input"
+              id="number-input"
+              class="number-input"
+            />
+            <button class="convert-btn" id="convert-btn">Convert</button>
+        </section>
+        <section class="output-container">
+            <output id="result" for="number-input"></output>
+        </section>
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>
