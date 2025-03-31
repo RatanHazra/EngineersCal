@@ -94,6 +94,10 @@ select {
   border-radius: 2px;
 }
 
+footer {
+    margin-top: 5px;
+}
+
 @media screen and (min-width: 36em) {
   body {
     font-size: 1rem;
