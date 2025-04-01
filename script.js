@@ -78,11 +78,20 @@ const checkUserInput = () => {
       if (isNaN(inputInt) || inputInt < 0) {
         alert("Please provide a valid decimal number greater than or equal to 0.");
         return;
-      } else if (inputValue >= 256) {
-        alert("Please enter maximum 8bit number");
-        return;
       }
-      result.textContent = `Binary: ${decimalToBinary(inputInt)} | Octal: ${decimalToOctal(inputInt)} | Hexadecimal: ${decimalToHexadecimal(inputInt)}`;
+      result.innerHTML = `
+                            <tr>
+                              <td>Binary</td>
+                              <td class="value">${decimalToBinary(inputInt)}</td>
+                            </tr>
+                            <tr>
+                              <td>Octal</td>
+                              <td class="value">${decimalToOctal(inputInt)}</td>
+                            </tr>
+                            <tr>
+                             <td>Hexadecimal</td>
+                              <td class="value">${decimalToHexadecimal(inputInt)}</td>
+                          `;
     } else if (conversion === "binary") {
       if (!/^[01]+$/.test(inputValue)) {
         alert("Please provide a valid binary number (only 0s and 1s).");
