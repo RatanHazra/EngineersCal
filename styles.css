@@ -73,7 +73,7 @@ h2 {
 
 .output-container {
   margin-inline: auto;
-  width: clamp(320px, 50vw, 460px);
+  /* width: clamp(320px, 50vw, 460px); */
 }
 
 select {
@@ -108,9 +108,12 @@ a:visited{
 }
 
 td {
-  width: 50%;
   padding: 5px;
   border: 1px solid black;
+  /* width: 20ch; */
+  max-width: 320px;
+  word-wrap: break-word;
+  white-space: pre-wrap;
 }
 
 .value {
