@@ -71,12 +71,15 @@ const checkUserInput = () => {
     } else if (!inputValue) {
       alert("Please provide a number.");
       return;
-    } 
+    }
   
     if (conversion === "decimal") {
       const inputInt = parseInt(inputValue);
       if (isNaN(inputInt) || inputInt < 0) {
         alert("Please provide a valid decimal number greater than or equal to 0.");
+        return;
+      } else if (inputValue >= 256) {
+        alert("Please enter maximum 8bit number");
         return;
       }
       result.textContent = `Binary: ${decimalToBinary(inputInt)} | Octal: ${decimalToOctal(inputInt)} | Hexadecimal: ${decimalToHexadecimal(inputInt)}`;
